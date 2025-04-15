@@ -100,7 +100,7 @@ public class player : MonoBehaviour
 
     {
         _controller.SetIsAttacking();
-        PlaySound(_AttackSound);
+      //  PlaySound(_AttackSound);
         _attackIsattive = false;
         _Currentenemy.ReceiveDamage(_damage);
 

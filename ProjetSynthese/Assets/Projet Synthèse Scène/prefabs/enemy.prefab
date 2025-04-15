@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7078323574714319049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.2, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 35, y: 30, z: 35}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7078323573353275391}
@@ -119,11 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _controller: {fileID: 4601754479481853757}
   _animator: {fileID: 7078323574714319054}
-  _WalkSound: {fileID: 8300000, guid: 473074dbf01f9854fad2cf7317a3f46a, type: 3}
-  _AttackSound: {fileID: 8300000, guid: 632780308cf207c4491c4cc4bed63445, type: 3}
-  _AudioSource: {fileID: 6879376793986918285}
   _damageOnCollision: 5
-  _speed: 2
+  _speed: 5
   _attackRange: 2
 --- !u!114 &-1550216017895929010
 MonoBehaviour:

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54845e9b896447843a2bd43acd230515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryPanel: {fileID: 0}
+  victoryPanel: {fileID: 8976632636558898931, guid: d511720e0fa53914f926603fa79ef778, type: 3}
 --- !u!65 &5149045163172613059
 BoxCollider:
   m_ObjectHideFlags: 0

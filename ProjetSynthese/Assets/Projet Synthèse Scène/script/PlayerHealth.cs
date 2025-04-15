@@ -10,8 +10,8 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private HealthBar _HealthBar;
     [SerializeField] private MeshRenderer _Graphics;
-    [SerializeField] private Image _InvincibilityIcon;
-    [SerializeField] private GameObject _VxBouclier;
+   // [SerializeField] private Image _InvincibilityIcon;
+   // [SerializeField] private GameObject _VxBouclier;
     [SerializeField] private float _InvincibilityFlashDelay = 0.2f;
     [SerializeField] private float _InvincibilityTimeAfterHit = 3f;
     [SerializeField] private bool _IsInvincible = false;
@@ -30,21 +30,21 @@ public class PlayerHealth : MonoBehaviour
         _CurrentHealth = _MaxHealth;
         _HealthBar.SetMaxHealth(_MaxHealth);
 
-        if (_InvincibilityIcon != null)
-            _InvincibilityIcon.fillAmount = 0; // L'icône est vide au début
+    //    if (_InvincibilityIcon != null)
+         //   _InvincibilityIcon.fillAmount = 0; // L'icône est vide au début
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H)) // Test de dégâts
         {
-            TakeDamage(50);
+            TakeDamage(20);
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) // Activer manuellement l'invincibilité
         {
             ActivateInvincibility();
-            _VxBouclier.SetActive(true);
+        //    _VxBouclier.SetActive(true);
         }
     }
 
@@ -111,23 +111,23 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator InvincibilityIconUpdate()
     {
-        if (_InvincibilityIcon == null)
+      //  if (_InvincibilityIcon == null)
         {
             Debug.LogError("L'icône d'invincibilité n'est pas assignée.");
             yield break;
         }
 
         float timer = 0;
-        _InvincibilityIcon.fillAmount = 1; // L'icône est complètement remplie au début
+     //   _InvincibilityIcon.fillAmount = 1; // L'icône est complètement remplie au début
 
         while (timer < _InvincibilityTimeAfterHit)
         {
             timer += Time.deltaTime;
-            _InvincibilityIcon.fillAmount = 1 - (timer / _InvincibilityTimeAfterHit); // Décrémentation du remplissage
+         //   _InvincibilityIcon.fillAmount = 1 - (timer / _InvincibilityTimeAfterHit); // Décrémentation du remplissage
             yield return null;
         }
 
-        _InvincibilityIcon.fillAmount = 0; // L'icône est vide à la fin de l'invincibilité
+     //   _InvincibilityIcon.fillAmount = 0; // L'icône est vide à la fin de l'invincibilité
         _IsInvincible = false;
     }
     private void Die()
@@ -135,7 +135,8 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Le joueur a perdu.");
         player._Instance.enabled = false;
         player._Instance._animator.SetBool("die", true);
-       
-        GameOver._Instance.OnplayerDeath();
+
+
+       //GameOver._Instance.OnplayerDeath();
     }
 }
