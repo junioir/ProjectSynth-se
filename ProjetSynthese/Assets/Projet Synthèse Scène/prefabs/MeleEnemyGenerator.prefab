@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5426143710187192151}
   - component: {fileID: -3322896389710856682}
+  - component: {fileID: 7520527356673246858}
+  - component: {fileID: 619253484229868647}
   m_Layer: 0
   m_Name: MeleEnemyGenerator
   m_TagString: Untagged
@@ -46,3 +48,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 7078323574714319049, guid: 8b9f22dbc27ada54bada7fcf0b9ce74a, type: 3}
   _spawnInterval: 50
+--- !u!195 &7520527356673246858
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5426143710187192150}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &619253484229868647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5426143710187192150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880ee546edcb9cd4c961b1c25a80add3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  damage: 10
+  moveSpeed: 3
+  resourceReward: 25
+  attackRange: 2
+  attackRate: 1
+  chargeSpeed: 5

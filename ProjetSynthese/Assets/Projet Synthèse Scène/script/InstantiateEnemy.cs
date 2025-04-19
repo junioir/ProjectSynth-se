@@ -18,7 +18,7 @@ public class InstantiateEnemy : MonoBehaviour
     {
         Enemy enemy = Instantiate(_enemy, position, Quaternion.identity);
         Color color = GetRandomcolor();
-        enemy.ChangeColor(color);
+       // enemy.ChangeColor(color);
     }
     private Color GetRandomcolor()
     {
