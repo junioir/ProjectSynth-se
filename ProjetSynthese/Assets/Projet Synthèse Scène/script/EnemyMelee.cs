@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class EnemyMelee : MonoBehaviour
+public class EnemyMelee : Enemy
 {
     [SerializeField] private AnimationController _controller;
     [SerializeField] private Animator _animator;
@@ -10,41 +10,18 @@ public class EnemyMelee : MonoBehaviour
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _attackRange = 2f;
 
-    private Transform _player;
+    //private Transform _player;
     //private bool _isAttacking;
     private const bool V = false;
 
-    void Start()
+    protected override void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player")?.transform;
-
-        if (_player == null)
-        {
-            Debug.LogError("Aucun joueur trouvé dans la scène !");
-        }
+        base.Start();
     }
 
-    void Update()
+    protected override void Update()
     {
-        if (_player == null) return;
-
-        float distanceToPlayer = Vector3.Distance(transform.position, _player.position);
-
-        if (distanceToPlayer <= _attackRange)
-        {
-            //_isAttacking = true;
-            _controller.SetIsNotWalking();
-            _controller.SetIsAttacking();
-           // PlaySound(_AttackSound);
-            AttackPlayer();
-        }
-        else
-        {
-            //_isAttacking = V;
-            _controller.SetIsWalking();
-           // PlaySound(_WalkSound);
-            FollowPlayer();
-        }
+        base.Update();
     }
 
     private void FollowPlayer()
@@ -85,5 +62,24 @@ public class EnemyMelee : MonoBehaviour
     {
         _animator.SetBool("IsAttacking", false);
     }
-   
+
+    protected override void MoveAndAttack()
+    {
+        if (_player == null) return;
+
+        float distanceToPlayer = Vector3.Distance(transform.position, _player.position);
+
+        if (distanceToPlayer <= _attackRange)
+        {
+            _controller.SetIsNotWalking();
+            _controller.SetIsAttacking();
+            AttackPlayer();
+        }
+        else
+        {
+            _controller.SetIsWalking();
+            FollowPlayer();
+        }
+    }
+
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
-using UnityEngine;
+
 public class EnemyBoss : MonoBehaviour
 {
     [SerializeField] private AnimationController _controller;

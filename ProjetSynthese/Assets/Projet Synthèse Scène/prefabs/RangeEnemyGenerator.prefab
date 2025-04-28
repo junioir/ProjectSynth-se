@@ -88,6 +88,6 @@ MonoBehaviour:
   resourceReward: 25
   attackRange: 2
   attackRate: 1
-  projectilePrefab: {fileID: 5249856771441702510}
-  firePoint: {fileID: 3258962324282341058, guid: 7f0aec7bd55c96e49b95d74ea3ce4a4d, type: 3}
+  projectilePrefab: {fileID: 7431093595791162837, guid: b7aff92e4b447854f99b05dc4b549008, type: 3}
+  firePoint: {fileID: 0}
   projectileSpeed: 20
