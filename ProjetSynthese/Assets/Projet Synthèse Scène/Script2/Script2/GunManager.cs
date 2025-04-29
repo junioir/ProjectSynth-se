@@ -3,6 +3,7 @@ using UnityEngine;
 public class GunManager : MonoBehaviour
 {
     public static GunManager instance;
+
     public Gun[] allGuns;
     private Gun currentGun;
 
@@ -13,12 +14,12 @@ public class GunManager : MonoBehaviour
 
     private void Start()
     {
-        EquipGun(0); // Commence avec la première arme (ex: GunSimple ou GunShotgun)
+        EquipGun(0); // Commencer avec la 1ère arme
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1")) // CLIC GAUCHE
+        if (Input.GetButtonDown("Fire1")) // clic gauche
         {
             currentGun?.Shoot();
         }
@@ -38,6 +39,4 @@ public class GunManager : MonoBehaviour
 
         currentGun = allGuns[index];
     }
-
-    public Gun GetCurrentGun() => currentGun;
 }

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class GunSimple : Gun
+public class GunRocketLauncher : Gun
 {
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject rocketPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private AudioSource shootSound;
 
@@ -10,8 +10,8 @@ public class GunSimple : Gun
     {
         if (!canShoot || ammo <= 0) return;
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody>().AddForce(firePoint.forward * 30f, ForceMode.Impulse);
+        GameObject rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
+        rocket.GetComponent<Rigidbody>().AddForce(firePoint.forward * 30f, ForceMode.Impulse);
 
         shootSound?.Play();
         PlayShootAnimation();
