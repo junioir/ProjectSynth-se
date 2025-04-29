@@ -10,7 +10,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float _life;
     [SerializeField] protected int _damage;
     protected Transform _player;
-     protected bool _canAttack = true;
+    protected bool _canAttack = true;
 
     protected virtual void Start()
     {

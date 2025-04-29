@@ -118,7 +118,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         float timer = 0;
-     //   _InvincibilityIcon.fillAmount = 1; // L'icône est complètement remplie au début
+        //_InvincibilityIcon.fillAmount = 1; // L'icône est complètement remplie au début
 
         while (timer < _InvincibilityTimeAfterHit)
         {

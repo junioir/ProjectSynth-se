@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3922672637012582919}
   - component: {fileID: 1266873459507943117}
   - component: {fileID: 7762473946886229723}
+  - component: {fileID: -5290997295774968181}
   m_Layer: 0
   m_Name: Gun_10
   m_TagString: Untagged
@@ -101,6 +102,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5075462177105968680, guid: 868d3a8c1a5caaf4e81d859491abdde5, type: 3}
+--- !u!95 &-5290997295774968181
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762281254878508824}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e2d04ecc8e872a49963dd8eb6f6f833, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1050003873215970208
 GameObject:
   m_ObjectHideFlags: 0
