@@ -2274,17 +2274,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 19317067294816837, guid: 44326f3a14f498d46872b90318a2b528, type: 3}
   m_PrefabInstance: {fileID: 165324212}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &166195646 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1580277370121839846, guid: 7f0aec7bd55c96e49b95d74ea3ce4a4d, type: 3}
-  m_PrefabInstance: {fileID: 920886704}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5efa4b39ac89304fbb9984716ba11cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &180789811
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,7 +3562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.039978, y: -37.422607}
+  m_AnchoredPosition: {x: -12.039917, y: -37.422607}
   m_SizeDelta: {x: 789.801, y: 178.2078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261700216
@@ -3590,15 +3579,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Junior tefo
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4375,7 +4362,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -10669,20 +10656,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035549289}
-  m_LocalRotation: {x: 0, y: 0.08715578, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: -4, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 261700215}
   m_Father: {fileID: 686217837}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 10, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 47.136}
-  m_SizeDelta: {x: 15.318, y: -621.405}
-  m_Pivot: {x: 0, y: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 300}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1035549291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13597,7 +13584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86724e1b55c56e4b9447f18f4d6b5e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorVisible: 0
+  cursorVisible: 1
 --- !u!4 &1293098665
 Transform:
   m_ObjectHideFlags: 0
@@ -19528,31 +19515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe3004e1e34b8a7469cf622795106da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves:
-  - meleeEnemies: 0
-    rangedEnemies: 0
-    specialEnemies: 0
-    spawnInterval: 0
-    waveCooldown: 0
-  - meleeEnemies: 0
-    rangedEnemies: 0
-    specialEnemies: 0
-    spawnInterval: 0
-    waveCooldown: 0
-  - meleeEnemies: 0
-    rangedEnemies: 0
-    specialEnemies: 0
-    spawnInterval: 0
-    waveCooldown: 0
-  spawnPoints:
-  - {fileID: 496688112}
-  - {fileID: 496688112}
-  meleeEnemyPrefab: {fileID: 0}
-  rangedEnemyPrefab: {fileID: 0}
-  specialEnemyPrefab: {fileID: 0}
-  currentWaveIndex: 0
-  waveInProgress: 0
-  enemiesRemaining: 0
 --- !u!4 &1897233765
 Transform:
   m_ObjectHideFlags: 0
@@ -22665,12 +22627,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef0acf7015877b40b3e84e2cc9bae6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 5
-  _attackRange: 2
-  _attackCooldown: 3
-  _life: 4
-  _damage: 2
-  _controller: {fileID: 166195646}
-  _zigzagAmplitude: 56
-  _zigzagFrequency: 10
+  _movementSpeed: 8
+  _attackRange: 8
+  _attackCooldown: 8
+  _life: 8
+  _damage: 5
+  _controller: {fileID: 2291913193058860297}
+  _zigzagAmplitude: 15
+  _zigzagFrequency: 2
   _playerChaseDistance: 5
