@@ -13,10 +13,12 @@ public class GunRocketLauncher : Gun
         GameObject rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
         rocket.GetComponent<Rigidbody>().AddForce(firePoint.forward * 30f, ForceMode.Impulse);
 
-        shootSound?.Play();
-        PlayShootAnimation();
+        if (shootSound != null)
+            shootSound.Play();
 
-        ammo--;
+        // shootSound?.Play();
+        PlayShootAnimation();
+ammo--;
         canShoot = false;
         Invoke(nameof(ResetShoot), shootCooldown);
     }

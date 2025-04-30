@@ -8,7 +8,7 @@ public class EnemyMelee : Enemy
     [SerializeField] private Animator _animator;
     [SerializeField] private int _damageOnCollision = 2;
     [SerializeField] private float _speed = 2f;
-    [SerializeField] private float _attackRange = 2f;
+   // [SerializeField] private float _attackRange = 2f;
     [SerializeField] private float _playerChaseDistance = 5f; // distance pour switch sur joueur
 
     private Transform _exitPoint;

@@ -8,18 +8,27 @@ public class GunSimple : Gun
 
     public override void Shoot()
     {
-        if (!canShoot || ammo <= 0) return;
+        if (!canShoot || ammo <= 0 || bulletPrefab == null || firePoint == null) return;
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody>().AddForce(firePoint.forward * 30f, ForceMode.Impulse);
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.AddForce(firePoint.forward * 30f, ForceMode.Impulse);
+        }
 
-        shootSound?.Play();
+
+        if (shootSound != null)
+            shootSound.Play();
+
+       // shootSound?.Play();
         PlayShootAnimation();
 
         ammo--;
         canShoot = false;
         Invoke(nameof(ResetShoot), shootCooldown);
     }
+
 
     private void ResetShoot() => canShoot = true;
 }

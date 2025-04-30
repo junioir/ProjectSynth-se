@@ -24,10 +24,13 @@ public class GunShotgun : Gun
             bullet.GetComponent<Rigidbody>().AddForce(bullet.transform.forward * 25f, ForceMode.Impulse);
         }
 
-        shootSound?.Play();
-        PlayShootAnimation();
+        if (shootSound != null)
+            shootSound.Play();
 
+        //shootSound?.Play();
+        PlayShootAnimation();
         ammo--;
+
         canShoot = false;
         Invoke(nameof(ResetShoot), shootCooldown);
     }

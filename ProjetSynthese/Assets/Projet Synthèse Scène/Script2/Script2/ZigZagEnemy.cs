@@ -7,7 +7,7 @@ public class ZigZagEnemy : Enemy
     [SerializeField] private float _zigzagAmplitude = 15f; // degrés de zigzag
     [SerializeField] private float _zigzagFrequency = 2f;  // fréquence
     [SerializeField] private float _playerChaseDistance = 5f; // distance pour attaquer le joueur
-    [SerializeField] private int _damage = 10;
+    //[SerializeField] private int _damage = 10;
 
     private float _zigzagTimer = 0f;
     private Transform _exitPoint;
