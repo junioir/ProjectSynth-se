@@ -3991,7 +3991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301763702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11920007, y: -0.0015600078, z: 0.2534401}
+  m_LocalPosition: {x: 0.0003, y: 0.0829, z: 0.2342}
   m_LocalScale: {x: 0.53826255, y: 1.1148996, z: 0.47779056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6586,7 +6586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556377684}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.099, y: 0.075, z: 0.257}
+  m_LocalPosition: {x: -0.0056, y: 0.0893, z: 0.2381}
   m_LocalScale: {x: 0.44855213, y: 0.9290831, z: 0.3981588}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14965,7 +14965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453260286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.843, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21363,7 +21363,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072872210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.01, y: 0, z: -0}
+  m_LocalPosition: {x: -0.481, y: 1.115, z: 0.142}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22633,6 +22633,6 @@ MonoBehaviour:
   _life: 8
   _damage: 5
   _controller: {fileID: 2291913193058860297}
-  _zigzagAmplitude: 15
-  _zigzagFrequency: 2
+  _zigzagAmplitude: 30
+  _zigzagFrequency: 1
   _playerChaseDistance: 5
