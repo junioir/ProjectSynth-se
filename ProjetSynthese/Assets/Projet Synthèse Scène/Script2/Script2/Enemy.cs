@@ -26,19 +26,40 @@ public abstract class Enemy : MonoBehaviour
 
     protected abstract void MoveAndAttack();
 
- 
 
+
+    /* public virtual void ReceiveDamage(float damage)
+     {
+         _life -= damage;
+         if (_life <= 0)
+         {
+             Die();
+         }
+     }
+    */
     public virtual void ReceiveDamage(float damage)
     {
         _life -= damage;
         if (_life <= 0)
         {
-            Die();
+            WaveManager.Instance.EnemyDied();
+            Destroy(gameObject);
         }
     }
+   
+
 
     protected virtual void Die()
     {
         Destroy(gameObject);
+
+
     }
+
+    public virtual void SetWaveScaling(int wave)
+    {
+        _life += (wave - 1) * 20; // augmente les PV par vague
+        _damage += (wave - 1) * 5; // augmente les dégâts par vague
+    }
+
 }

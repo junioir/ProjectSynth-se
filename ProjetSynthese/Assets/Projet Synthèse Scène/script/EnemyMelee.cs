@@ -11,7 +11,7 @@ public class EnemyMelee : Enemy
    // [SerializeField] private float _attackRange = 2f;
     [SerializeField] private float _playerChaseDistance = 5f; // distance pour switch sur joueur
 
-    private Transform _exitPoint;
+    [SerializeField] private Transform _exitPoint;
     private Transform _target; // Vers qui on se déplace
 
     protected override void Start()
@@ -101,7 +101,7 @@ public class EnemyMelee : Enemy
         else if (other.CompareTag("ExitPoint"))
         {
             // Si atteint ExitPoint, inflige dégât et disparaît
-            GameManager.instance.TakeDamage(_damageOnCollision);
+         //GameManager.instance.TakeDamage(_damageOnCollision);
             Destroy(gameObject);
         }
     }
