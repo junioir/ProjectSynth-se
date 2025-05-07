@@ -108,7 +108,8 @@ public class RangedEnemy : Enemy
         else if (_target == _exitPoint)
         {
             // Si à l'ExitPoint, infliger des dégâts directement et détruire l'ennemi
-            GameManager.instance.TakeDamage(_damage);
+            //GameManager.instance.TakeDamage(_damage);
+            WaveManager.Instance.EnemyDied();
             Destroy(gameObject);
             yield break; // important pour stopper la coroutine ici
         }
@@ -122,7 +123,7 @@ public class RangedEnemy : Enemy
         _life -= damage;
         if (_life <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 }

@@ -71,7 +71,7 @@ public class EnemyMelee : Enemy
         if (_target == null) return;
 
         Vector3 direction = (_target.position - transform.position).normalized;
-        transform.Translate(direction * _speed * Time.deltaTime, Space.World);
+        transform.Translate(direction * _movementSpeed * Time.deltaTime, Space.World);
 
         // Orienter l'ennemi vers la cible
         Quaternion targetRotation = Quaternion.LookRotation(direction);
@@ -86,6 +86,8 @@ public class EnemyMelee : Enemy
         {
             playerHealth.TakeDamage(_damageOnCollision);
         }
+       ;
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -115,4 +117,6 @@ public class EnemyMelee : Enemy
     {
         _animator.SetBool("IsAttacking", false);
     }
+
+
 }

@@ -28,16 +28,8 @@ public abstract class Enemy : MonoBehaviour
 
 
 
-    /* public virtual void ReceiveDamage(float damage)
-     {
-         _life -= damage;
-         if (_life <= 0)
-         {
-             Die();
-         }
-     }
-    */
-    public virtual void ReceiveDamage(float damage)
+
+    /*public virtual void ReceiveDamage(float damage)
     {
         _life -= damage;
         if (_life <= 0)
@@ -45,21 +37,36 @@ public abstract class Enemy : MonoBehaviour
             WaveManager.Instance.EnemyDied();
             Destroy(gameObject);
         }
+    }*/
+    // Fonction pour recevoir des dégâts
+    public virtual void ReceiveDamage(float damage)
+    {
+        _life -= damage;
+
+        if (_life <= 0)
+        {
+            Die();
+        }
     }
-   
+
 
 
     protected virtual void Die()
     {
+        Debug.Log("Enemy mort — on appelle EnemyDied");
+        WaveManager.Instance.EnemyDied();
         Destroy(gameObject);
 
 
     }
 
+   
     public virtual void SetWaveScaling(int wave)
     {
-        _life += (wave - 1) * 20; // augmente les PV par vague
-        _damage += (wave - 1) * 5; // augmente les dégâts par vague
+        _life += (wave - 1) * 30; // +30 HP par vague
+        _damage += (wave - 1) * 5; // +5 dégâts par vague
+        _movementSpeed += (wave - 1) * 0.5f; // +0.5 unité/sec par vague
     }
+
 
 }
