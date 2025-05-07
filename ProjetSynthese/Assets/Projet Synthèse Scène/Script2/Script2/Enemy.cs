@@ -29,16 +29,6 @@ public abstract class Enemy : MonoBehaviour
 
 
 
-    /*public virtual void ReceiveDamage(float damage)
-    {
-        _life -= damage;
-        if (_life <= 0)
-        {
-            WaveManager.Instance.EnemyDied();
-            Destroy(gameObject);
-        }
-    }*/
-    // Fonction pour recevoir des dégâts
     public virtual void ReceiveDamage(float damage)
     {
         _life -= damage;
@@ -63,9 +53,9 @@ public abstract class Enemy : MonoBehaviour
    
     public virtual void SetWaveScaling(int wave)
     {
-        _life += (wave - 1) * 30; // +30 HP par vague
-        _damage += (wave - 1) * 5; // +5 dégâts par vague
-        _movementSpeed += (wave - 1) * 0.5f; // +0.5 unité/sec par vague
+        _life += (wave - 1) * 30; 
+        _damage += (wave - 1) * 5; 
+        _movementSpeed += (wave - 1) * 0.5f;
     }
 
 

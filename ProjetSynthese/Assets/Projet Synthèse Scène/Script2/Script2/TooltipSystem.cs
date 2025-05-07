@@ -16,7 +16,7 @@ public class TooltipSystem : MonoBehaviour
 
     public void Show(string content, Vector2 position)
     {
-        Debug.Log("TOOLTIP SHOW: " + content); // ← AJOUTE CETTE LIGNE
+        Debug.Log("TOOLTIP SHOW: " + content);
         tooltipPanel.SetActive(true);
         tooltipText.text = content;
         tooltipPanel.transform.position = position;
