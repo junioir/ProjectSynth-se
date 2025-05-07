@@ -124,6 +124,8 @@ public class RangedEnemy : Enemy
         if (_life <= 0)
         {
             Die();
+           _audioSource.Play();
+
         }
     }
 }

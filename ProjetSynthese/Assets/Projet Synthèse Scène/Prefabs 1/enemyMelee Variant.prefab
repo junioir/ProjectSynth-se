@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6879376793986918285, guid: 8b9f22dbc27ada54bada7fcf0b9ce74a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e446feaf4dfb5c4688609fb55ecb221, type: 3}
     - target: {fileID: 7078323574714319040, guid: 8b9f22dbc27ada54bada7fcf0b9ce74a, type: 3}
       propertyPath: _life
       value: 5
@@ -18,7 +22,11 @@ PrefabInstance:
     - target: {fileID: 7078323574714319040, guid: 8b9f22dbc27ada54bada7fcf0b9ce74a, type: 3}
       propertyPath: _exitPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7948367400962647003, guid: 8b1121ebe1be6a44b9097a8bdd68fa6c, type: 3}
+    - target: {fileID: 7078323574714319040, guid: 8b9f22dbc27ada54bada7fcf0b9ce74a, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 269394100961620495}
     - target: {fileID: 7078323574714319040, guid: 8b9f22dbc27ada54bada7fcf0b9ce74a, type: 3}
       propertyPath: _movementSpeed
       value: 5
@@ -77,7 +85,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7078323574714319049, guid: 8b9f22dbc27ada54bada7fcf0b9ce74a, type: 3}
       propertyPath: m_Name
-      value: enemyMelee
+      value: enemyMelee Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b9f22dbc27ada54bada7fcf0b9ce74a, type: 3}
+--- !u!82 &269394100961620495 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6879376793986918285, guid: 8b9f22dbc27ada54bada7fcf0b9ce74a, type: 3}
+  m_PrefabInstance: {fileID: 6684855045831316866}
+  m_PrefabAsset: {fileID: 0}

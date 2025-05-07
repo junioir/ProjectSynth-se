@@ -6,6 +6,7 @@ public class EnemyMelee : Enemy
 {
     [SerializeField] private AnimationController _controller;
     [SerializeField] private Animator _animator;
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private int _damageOnCollision = 2;
     [SerializeField] private float _speed = 2f;
    // [SerializeField] private float _attackRange = 2f;
@@ -102,9 +103,9 @@ public class EnemyMelee : Enemy
         }
         else if (other.CompareTag("ExitPoint"))
         {
-            // Si atteint ExitPoint, inflige dégât et disparaît
-         //GameManager.instance.TakeDamage(_damageOnCollision);
+           
             Destroy(gameObject);
+            _audioSource.Play();
         }
     }
 
