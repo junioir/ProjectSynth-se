@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private HealthBar _HealthBar;
     [SerializeField] private MeshRenderer _Graphics;
-   // [SerializeField] private Image _InvincibilityIcon;
+   //[SerializeField] private Image _InvincibilityIcon;
    // [SerializeField] private GameObject _VxBouclier;
     [SerializeField] private float _InvincibilityFlashDelay = 0.2f;
     [SerializeField] private float _InvincibilityTimeAfterHit = 3f;
@@ -118,7 +118,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         float timer = 0;
-        //_InvincibilityIcon.fillAmount = 1; // L'icône est complètement remplie au début
+       // _InvincibilityIcon.fillAmount = 1; // L'icône est complètement remplie au début
 
         while (timer < _InvincibilityTimeAfterHit)
         {
@@ -135,8 +135,6 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Le joueur a perdu.");
         player._Instance.enabled = false;
         player._Instance._animator.SetBool("die", true);
-
-
-       //GameOver._Instance.OnplayerDeath();
+        GameOver._Instance.OnplayerDeath();
     }
 }

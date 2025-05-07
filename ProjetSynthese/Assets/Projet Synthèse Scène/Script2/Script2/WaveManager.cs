@@ -119,7 +119,7 @@ public class WaveManager : MonoBehaviour
     public void EnemyDied()
     {
         enemiesAlive--;
-        ResourceManager.Instance.AddResource(10); // Donne 10 ressources
+        ResourceManager.Instance.AddResource(40); // Donne 10 ressources
         UpdateEnemyCountUI();
         if (enemiesAlive <= 0 && isWaveInProgress)
 
