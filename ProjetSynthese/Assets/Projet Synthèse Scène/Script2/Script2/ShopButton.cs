@@ -11,16 +11,16 @@ public class ShopButton : MonoBehaviour
     {
         button = GetComponent<Button>();
 
-        // 🔗 S'abonne à l'événement du ResourceManager
+      
         ResourceManager.Instance.OnResourceChanged += CheckResources;
 
-        // Vérifie une première fois à l'initialisation
+        
         CheckResources();
     }
 
     private void OnDestroy()
     {
-        // 🔌 Toujours se désabonner pour éviter les erreurs
+       
         if (ResourceManager.Instance != null)
             ResourceManager.Instance.OnResourceChanged -= CheckResources;
     }

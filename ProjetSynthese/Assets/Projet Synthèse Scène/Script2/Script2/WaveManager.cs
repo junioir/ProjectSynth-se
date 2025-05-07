@@ -41,18 +41,7 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(StartNextWave());
     }
 
-    /* IEnumerator StartNextWave()
-     {
-         currentWave++;
-         isWaveInProgress = true;
-
-         if (waveText != null)
-             waveText.text = "Vague : " + currentWave;
-
-         yield return new WaitForSeconds(timeBetweenWaves);
-
-         SpawnWave(currentWave);
-     }*/
+   
     IEnumerator StartNextWave()
     {
         yield return new WaitForSeconds(timeBetweenWaves);
@@ -67,18 +56,7 @@ public class WaveManager : MonoBehaviour
     }
 
 
-  /*  void SpawnWave(int waveNumber)
-    {
-        Debug.Log("SPAWN WAVE " + waveNumber);
-        enemiesAlive = 0;
-
-        for (int i = 0; i < waveNumber; i++) // instancier X ennemis de chaque type selon la vague
-        {
-            SpawnEnemy(meleeEnemyPrefab, meleeSpawnPoint, waveNumber);
-            SpawnEnemy(rangedEnemyPrefab, rangedSpawnPoint, waveNumber);
-            SpawnEnemy(zigzagEnemyPrefab, zigzagSpawnPoint, waveNumber);
-        }
-    }*/
+  
     void SpawnWave(int waveNumber)
     {
         enemiesAlive = 0;
@@ -119,7 +97,7 @@ public class WaveManager : MonoBehaviour
     public void EnemyDied()
     {
         enemiesAlive--;
-        ResourceManager.Instance.AddResource(40); // Donne 10 ressources
+        ResourceManager.Instance.AddResource(40); 
         UpdateEnemyCountUI();
         if (enemiesAlive <= 0 && isWaveInProgress)
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float _speed = 15f; // Vitesse du projectile
+    [SerializeField] private float _speed = 15f; 
     private Vector3 _target;
     private int _damage;
 

@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
 
         float damage = CalculateDamage();
 
-        // Gestion des différents types d’ennemis
+       
         if (other.TryGetComponent(out EnemyMelee meleeEnemy))
         {
             meleeEnemy.ReceiveDamage(damage);
